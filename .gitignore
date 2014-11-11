@@ -11,3 +11,4 @@
 /log/*.log
 /tmp
 /config/local_env.yml
+.env
