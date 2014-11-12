@@ -408,7 +408,7 @@ the_brookline.options.create!(
 build_your_own = sandwiches.products.create!(
   title: 'Build Your Own!',
   description: 'Select ingredients from the the list below:',
-  price: 0.00,
+  price: 2.50,
   image_url: 'http://camillestyles.com/wp-content/uploads/2014/08/Camille_bachelorette_FINAL_v1-8.jpg'
 )
 
