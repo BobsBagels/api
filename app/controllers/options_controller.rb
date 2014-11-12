@@ -15,6 +15,6 @@ class OptionsController < ApplicationController
 
   private 
   def options_params
-    params.require(:option).permit(:line_item_id, :items, :price)
+    params.require(:option).permit(:line_item_id, :items, :price, :product_id)
   end
 end

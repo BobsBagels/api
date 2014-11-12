@@ -28,6 +28,14 @@ class LineItemsController < ApplicationController
   end
 
   def update
+
+    if @line_item.update(line_item_params)
+      render json: @line_item, status: 200
+    else
+      binding.pry
+      render json: @line_item.errors, status: :unprocessable_entity
+    end
+    
   end
 
   def destroy
