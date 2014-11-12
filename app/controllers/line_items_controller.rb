@@ -8,7 +8,7 @@ class LineItemsController < ApplicationController
   end
 
   def show
-    render json: @line_item
+    render json: @line_item, status: 200
   end
 
   def create
@@ -16,9 +16,12 @@ class LineItemsController < ApplicationController
     @product = Product.find(line_item_params[:product_id])
     @cart = Cart.find(line_item_params[:cart_id])
     @line_item.quantity = line_item_params[:quantity]
-
+    # @order = Order.find(line_item_params[:order_id])
+    # @line_item.total_price = '%.2f' % @line_item.total_price
+    
     if @line_item.save
-      render json: @line_item, status: :created, location: @line_item
+      # format.json render partial: "line_items/show.json", status: :created, location: @line_item
+      render json: @line_item, include: @line_item.total_price, status: :created, location: @line_item
     else
       render json: @line_item.errors, status: :unprocessable_entity
     end

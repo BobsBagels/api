@@ -4,4 +4,5 @@ class LineItemSerializer < ActiveModel::Serializer
   belongs_to :product
   belongs_to :cart
   has_many :options
+  url [:line_item]
 end

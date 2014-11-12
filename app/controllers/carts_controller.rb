@@ -1,5 +1,5 @@
 class CartsController < ApplicationController
-  # before_action :set_cart, only: [:show,:edit,:update,:destroy]
+  before_action :set_cart, only: [:show,:edit,:update,:destroy]
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
   def index
@@ -8,7 +8,7 @@ class CartsController < ApplicationController
   end
 
   def show
-    render json: @cart, status: 200
+    render json: @cart, status: 200, location: @cart
   end
 
   def edit
@@ -27,9 +27,9 @@ class CartsController < ApplicationController
   end
 
   def destroy
-    @cart.destroy if @cart.id == session[:cart_id]
-    session[:cart_id] = nil
-    head :no_content
+    @cart.line_items = []
+    render json: @cart, status: 202
+    return
   end
 
   private
