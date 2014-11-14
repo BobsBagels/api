@@ -1,5 +1,4 @@
 class LineItemsController < ApplicationController
-  # before_action :set_cart, only: [:create]
   before_action :set_line_item, only: [:show,:edit,:update,:destroy]
 
   def index
@@ -16,11 +15,8 @@ class LineItemsController < ApplicationController
     @product = Product.find(line_item_params[:product_id])
     @cart = Cart.find(line_item_params[:cart_id])
     @line_item.quantity = line_item_params[:quantity]
-    # @order = Order.find(line_item_params[:order_id])
-    # @line_item.total_price = '%.2f' % @line_item.total_price
-    
+
     if @line_item.save
-      # format.json render partial: "line_items/show.json", status: :created, location: @line_item
       render json: @line_item, include: @line_item.total_price, status: :created, location: @line_item
     else
       render json: @line_item.errors, status: :unprocessable_entity
@@ -35,7 +31,7 @@ class LineItemsController < ApplicationController
       binding.pry
       render json: @line_item.errors, status: :unprocessable_entity
     end
-    
+
   end
 
   def destroy

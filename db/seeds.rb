@@ -11,14 +11,14 @@ small_plain_bagels = catering.products.create!(
   title: 'Small Bagel Box',
   description: '12 Plain Bagels',
   price: 12.00,
-  image_url: 'https://foodartist.files.wordpress.com/2011/02/bagel-plain.jpg'
+  image_url: 'http://hostedmedia.reimanpub.com/TOH/Images/Photos/37/300x300/exps38345_THHC1997839A05_24_1bC.jpg'
 )
 
 small_variety = catering.products.create!(
   title: 'Small Variety Bagel Box',
   description: '12 Bagels (2 of each of the varieties)',
   price: 15.00,
-  image_url: 'http://media.prolificoven.com/pastries/bagel/600X400/bagel_box_of_12_assorted.jpg'
+  image_url: 'http://bkbagel.com/wp-content/uploads/2012/10/bk-bagels.jpg'
 )
 
 small_variety.options.create!(
@@ -56,7 +56,7 @@ small_single = catering.products.create!(
   title: 'Small Single-variety Bagel Box',
   description: '12 Bagels of any one variety',
   price: 15.00,
-  image_url: 'http://media.prolificoven.com/pastries/bagel/600X400/bagel_box_of_12_assorted.jpg'
+  image_url: 'http://hostedmedia.reimanpub.com/TOH/Images/Photos/37/300x300/exps38345_THHC1997839A05_24_1bC.jpg'
 )
 
 small_single.options.create!(
@@ -94,14 +94,14 @@ large_plain_bagels = catering.products.create!(
   title: 'Large Bagel Box',
   description: '18 Plain Bagels',
   price: 18.00,
-  image_url: 'http://media.prolificoven.com/pastries/bagel/600X400/bagel_box_of_12_assorted.jpg'
+  image_url: 'http://2.bp.blogspot.com/-zxcsxPsJLRk/UPrtXqM_cUI/AAAAAAAAATk/7l5lUVg7JyA/s640/Bagel%2BPics%2B050.JPG'
 )
 
 large_variety = catering.products.create!(
   title: 'Large Variety Bagel Box',
   description: '18 Bagels (3 of each of the varieties)',
   price: 20.00,
-  image_url: 'http://media.prolificoven.com/pastries/bagel/600X400/bagel_box_of_12_assorted.jpg'
+  image_url: 'http://www.epicurious.com/images/recipesmenus/other/51237040.jpg'
 )
 
 large_variety.options.create!(
@@ -138,7 +138,7 @@ large_single = catering.products.create!(
   title: 'Large Single-variety Bagel Box',
   description: '18 Bagels of any one variety',
   price: 20.00,
-  image_url: 'https://foodartist.files.wordpress.com/2011/02/bagel-plain.jpg'
+  image_url: 'http://www.bagelsforever.com/wp-content/uploads/2013/07/bagels.png'
 )
 
 large_single.options.create!(
@@ -175,7 +175,7 @@ cream_cheese_plain = catering.products.create!(
   title: 'Plain Cream Cheese',
   description: '8oz Tub of Cream Cheese...mmmmmmmm cream cheese',
   price: 4.00,
-  image_url: 'http://1.bp.blogspot.com/-hfKAR7Ke6n0/T46jAiJUPhI/AAAAAAAAJAY/BCBXRJ8cGZg/s1600/2020mascarpone.jpg'
+  image_url: 'http://www.thistlewoodfarms.com/wp-content/uploads/2013/01/Whipped_Cream.jpg'
 )
 
 cream_cheese_chive = catering.products.create!(
@@ -204,7 +204,7 @@ party_box = catering.products.create!(
   title: 'Party Box',
   description: '25 bagels of any kind',
   price: 50.00,
-  image_url: 'http://www.bagelsforever.com/wp-content/uploads/2013/07/bagels.png'
+  image_url: 'http://www.fairmountbagel.com/images/back5.jpg'
 )
 
 party_box.options.create!(
@@ -252,7 +252,7 @@ somerville = sandwiches.products.create!(
   title: 'The Somerville',
   description: 'Whole wheat bagel with:',
   price: 6.75,
-  image_url: 'http://www.andrealucich.com/data/photos/254_1turkey_asiago_bagel_food_stylist_san_francisco.jpg'
+  image_url: 'https://36.media.tumblr.com/5f97fa14225cd88ac8b331eb20def32d/tumblr_mglb6wp6MT1qh4p4io1_r1_500.png'
 )
 
 somerville.options.create!(
@@ -348,7 +348,7 @@ the_hub = sandwiches.products.create!(
   title: 'The Hub',
   description: 'Plain bagel with:',
   price: 6.00,
-  image_url: 'http://img4-2.myrecipes.timeinc.net/i/recipes/su/05/08/salmon-bagel-su-682809-x.jpg'
+  image_url: 'http://www.andrealucich.com/data/photos/254_1turkey_asiago_bagel_food_stylist_san_francisco.jpg'
 )
 
 the_hub.options.create!(
@@ -381,7 +381,7 @@ the_brookline = sandwiches.products.create!(
   title: 'The Brookline',
   description: 'Poppyseed bagel with:',
   price: 7.50,
-  image_url: 'http://img4-2.myrecipes.timeinc.net/i/recipes/su/05/08/salmon-bagel-su-682809-x.jpg'
+  image_url: 'http://scoutology.com/wp-content/uploads/2014/10/main.jpg'
 )
 
 the_brookline.options.create!(

@@ -11,9 +11,6 @@ class CartsController < ApplicationController
     render json: @cart, status: 200, location: @cart
   end
 
-  # def edit
-  #   binding.pry
-  # end
 
   def create
     @cart = Cart.new(cart_params)

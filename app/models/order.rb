@@ -1,9 +1,3 @@
-# t.string :name
-# t.text :address
-# t.string :email
-# t.string :pay_type
-# t.boolean :delivery
-
 class Order < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
   has_one :cart

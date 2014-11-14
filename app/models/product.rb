@@ -1,12 +1,3 @@
-=begin
-t.string :title
-t.text :description
-t.decimal :price, precision: 8, scale: 2
-t.string :image_url
-t.references :category, index: true
-=end
-
-
 class Product < ActiveRecord::Base
   has_many :line_items
   has_many :options
@@ -14,7 +5,6 @@ class Product < ActiveRecord::Base
   belongs_to :category
   validates :title, :description, :image_url, presence: true
   validates :price, numericality: { greater_than_or_equal_to: 0.01 }
-  # validates :title, unique: true
   validates :image_url, allow_blank: true, format: {
     with: %r{\.(gif|jpg|png|jpeg)\Z}i,
     message: 'must be a URL for .gif, .jpg, or .png image.'
