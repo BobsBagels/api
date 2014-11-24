@@ -2,7 +2,7 @@ class LineItemsController < ApplicationController
   before_action :set_line_item, only: [:show,:edit,:update,:destroy]
 
   def index
-    @line_items = LineItem.all
+    @line_items = LineItem.all.includes(:options)
     render json: @line_items, status: 200
   end
 

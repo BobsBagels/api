@@ -10,6 +10,7 @@ gem 'rack-cors'
 gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'stripe'
 gem 'rack-ssl-enforcer'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
@@ -18,4 +19,5 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'bullet'
 end

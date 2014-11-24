@@ -3,7 +3,7 @@ class CartsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
 
   def index
-    @cart = Cart.all
+    @cart = Cart.all.includes(:line_items)
     render json: @cart, status: 200
   end
 

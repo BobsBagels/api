@@ -1,7 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
   def index
-    @products = Product.order(:category_id)
+    @products = Product.includes(:category, :line_items, :options).order(:category_id)
     render json: @products
   end
 
