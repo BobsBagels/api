@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20141112152700) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "cart_id"
+    t.string   "token"
   end
 
   add_index "orders", ["cart_id"], name: "index_orders_on_cart_id", using: :btree
